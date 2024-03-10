@@ -170,7 +170,9 @@ in
       requires = [
         "lxcfs.service"
         "incus.socket"
-      ];
+      ]
+        ++ lib.optional config.virtualisation.vswitch.enable "ovs-vswitchd.service";
+
       wants = [
         "network-online.target"
       ];
