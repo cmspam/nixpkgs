@@ -164,7 +164,9 @@ in
         "network-online.target"
         "lxcfs.service"
         "incus.socket"
-      ];
+      ]
+        ++ lib.optional config.virtualisation.vswitch.enable "ovs-vswitchd.service";
+
       requires = [
         "lxcfs.service"
         "incus.socket"
@@ -176,7 +178,8 @@ in
       path = lib.mkIf config.boot.zfs.enabled [
         config.boot.zfs.package
         "${config.boot.zfs.package}/lib/udev"
-      ];
+      ]
+        ++ lib.optional config.virtualisation.vswitch.enable config.virtualisation.vswitch.package;
 
       environment = lib.mkMerge [ {
         # Override Path to the LXC template configuration directory
