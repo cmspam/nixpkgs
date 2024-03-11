@@ -177,7 +177,7 @@ in
         "network-online.target"
       ];
 
-      path = lib.mkIf config.boot.zfs.enabled [
+      path = lib.optional config.boot.zfs.enabled [
         config.boot.zfs.package
         "${config.boot.zfs.package}/lib/udev"
       ]
