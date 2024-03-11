@@ -97,6 +97,7 @@ mapAliases ({
   bashInteractive_5 = bashInteractive; # Added 2021-08-20
   bash_5 = bash; # Added 2021-08-20
   bazel_3 = throw "bazel 3 is past end of life as it is not an lts version"; # Added 2023-02-02
+  bazel_4 = throw "'bazel_4' has been removed from nixpkgs as it has reached end of life"; # Added 2024-01-23
   bedup = throw "bedup was removed because it was broken and abandoned upstream"; # added 2023-02-04
   bee-unstable = throw "bee-unstable has been removed, use 'bee' instead"; # Added 2024-02-12
   bee-clef = throw "bee-clef has been removed as the upstream project was archived"; # Added 2024-02-12
@@ -171,7 +172,7 @@ mapAliases ({
   cpp-ipfs-api = cpp-ipfs-http-client; # Project has been renamed. Added 2022-05-15
   crispyDoom = crispy-doom; # Added 2023-05-01
   cryptowatch-desktop = throw "Cryptowatch Desktop was sunset on September 30th 2023 and has been removed from nixpkgs"; # Added 2023-12-22
-  clash = throw "'clash' has been removed, upstream gone. Consider using 'clash-meta' instead."; # added 2023-11-10
+  clash = throw "'clash' has been removed, upstream gone. Consider using 'mihomo' instead."; # added 2023-11-10
   clasp = clingo; # added 2022-12-22
   claws-mail-gtk3 = claws-mail; # Added 2021-07-10
   clucene_core_1 = throw "'clucene_core_1' has been renamed to/replaced by 'clucene_core'"; # Added 2023-12-09
@@ -607,6 +608,7 @@ mapAliases ({
   linuxPackages_6_5 = linuxKernel.packages.linux_6_5;
   linuxPackages_6_6 = linuxKernel.packages.linux_6_6;
   linuxPackages_6_7 = linuxKernel.packages.linux_6_7;
+  linuxPackages_6_8 = linuxKernel.packages.linux_6_8;
   linuxPackages_rpi0 = linuxKernel.packages.linux_rpi1;
   linuxPackages_rpi02w = linuxKernel.packages.linux_rpi3;
   linuxPackages_rpi1 = linuxKernel.packages.linux_rpi1;
@@ -633,6 +635,7 @@ mapAliases ({
   linux_6_5 = linuxKernel.kernels.linux_6_5;
   linux_6_6 = linuxKernel.kernels.linux_6_6;
   linux_6_7 = linuxKernel.kernels.linux_6_7;
+  linux_6_8 = linuxKernel.kernels.linux_6_8;
   linux_rpi0 = linuxKernel.kernels.linux_rpi1;
   linux_rpi02w = linuxKernel.kernels.linux_rpi3;
   linux_rpi1 = linuxKernel.kernels.linux_rpi1;
